@@ -1,0 +1,123 @@
+<div id="content" class="transferws-content">
+        <!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MZWFF7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script data-cfasync="false">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MZWFF7');</script>
+<!-- End Google Tag Manager -->
+        <div id="page_info" style="display:none;">
+            <title>Перевод через агента | Binary.com</title>
+            <div id="content_class">transferws-content</div>
+        </div>
+        
+        <div class="container">
+
+
+  <div class="gr-12" id="pa-transfer-client">
+    <h1>Перевод через агента</h1>
+
+    <div id="pa_confirm_transfer" class="invisible">
+        <p>Просим подтвердить данные транзакции для завершения перевода:</p>
+        <table class="kv-pairs">
+            <tr>
+                <td>Перевести на имя: </td>
+                <td id="user-name"></td>
+            </tr>
+            <tr>
+                <td>Логин: </td>
+                <td id="login-id"></td>
+            </tr>
+            <tr>
+                <td>Количество: </td>
+                <td id="amount"></td>
+            </tr>
+        </table>
+        <p class="errorfield invisible"></p>
+        <span class="button ">
+            <button id="back_transfer" class="button ">назад</button>
+        </span>
+        <span class="button ">
+            <button id="confirm_transfer" class="button " type="submit">Подтвердить</button>
+        </span>
+    </div>
+
+    <div id="pa_transfer_done" class="invisible">
+        <p id="confirm-msg" class="invisible"></p>
+        <p>
+            <a class="button" href="/binary-static/ru/user/statementws.html">
+                <span class="button">Смотрите свою историю счета</span>
+            </a>
+        </p>
+    </div>
+
+    <div id="no_balance_error" class="invisible">
+        <p class="notice-msg">Пожалуйста, пополните счёт перед переводом клиенту.</p>
+        <a href="/cashier?l=EN">Пополнение</a>
+    </div>
+
+    <div id="virtual_error" class="invisible">
+        <p class="center notice-msg">Данная функция недоступна на демо-счетах.</p>
+    </div>
+
+    <div id="not_pa_error" class="invisible">
+        <p class="center notice-msg">Данная функция доступна лишь на счетах платёжных агентов.</p>
+    </div>
+
+    <div id="paymentagent_transfer" class="invisible">
+        <p>Просим указать логин и сумму, которую Вы желаете перевести Клиенту, в форме ниже:</p>
+        <table class="kv-pairs">
+            <tr>
+                <td>
+                    <label for="client_id">Перевести на логин</label>
+                </td>
+                <td>
+                    <input type="text" name="client_id" id="client_id"/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <span class="errorfield invisible" id="transfer_error_client_id"></span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="amount">Количество</label>
+                </td>
+                <td>
+                    <input type="number" name="amount" min="10" max="2000"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <span class="errorfield invisible" id="transfer_error_amount">Пожалуйста, введите правильную сумму.</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <span class="hint">Мин.: 10 Макс.: 2000</span>
+                </td>
+            </tr>
+        </table>
+        <p id="insufficient-balance-error" class="errorfield invisible">Недостаточно баланса</p>
+        <br/>
+        <span class="button ">
+            <button class="button " id="submit" name="submit" type="submit" value="Submit">Подтвердить</button>
+        </span>
+    </div>
+
+    <br>
+    <div id="paymentagent_transfer_notes" class="invisible">
+        <div>Notes:</div>
+        <ul>
+            <li>Наш сайт не берёт комиссий за перевод.</li>
+            <li>Когда Вы нажмете кнопку 'Подтвердить', средства будет сняты с Вашего счета и перечислены на счет клиента.</li>
+            <li>Ваш клиент получит по электронной почте уведомление о том, что перевод был выполнен.</li>
+        </ul>
+    </div>
+</div>

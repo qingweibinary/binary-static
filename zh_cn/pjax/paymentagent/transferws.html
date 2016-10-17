@@ -1,0 +1,123 @@
+<div id="content" class="transferws-content">
+        <!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MZWFF7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script data-cfasync="false">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MZWFF7');</script>
+<!-- End Google Tag Manager -->
+        <div id="page_info" style="display:none;">
+            <title>支付代理转账 | Binary.com</title>
+            <div id="content_class">transferws-content</div>
+        </div>
+        
+        <div class="container">
+
+
+  <div class="gr-12" id="pa-transfer-client">
+    <h1>支付代理转账</h1>
+
+    <div id="pa_confirm_transfer" class="invisible">
+        <p>请确认交易详情以完成转账：</p>
+        <table class="kv-pairs">
+            <tr>
+                <td>转给: </td>
+                <td id="user-name"></td>
+            </tr>
+            <tr>
+                <td>登录 ID: </td>
+                <td id="login-id"></td>
+            </tr>
+            <tr>
+                <td>金额: </td>
+                <td id="amount"></td>
+            </tr>
+        </table>
+        <p class="errorfield invisible"></p>
+        <span class="button ">
+            <button id="back_transfer" class="button ">返回</button>
+        </span>
+        <span class="button ">
+            <button id="confirm_transfer" class="button " type="submit">确认</button>
+        </span>
+    </div>
+
+    <div id="pa_transfer_done" class="invisible">
+        <p id="confirm-msg" class="invisible"></p>
+        <p>
+            <a class="button" href="/binary-static/zh_cn/user/statementws.html">
+                <span class="button">查看您的账单</span>
+            </a>
+        </p>
+    </div>
+
+    <div id="no_balance_error" class="invisible">
+        <p class="notice-msg">给客户转账前请先存款。</p>
+        <a href="/cashier?l=EN">存款</a>
+    </div>
+
+    <div id="virtual_error" class="invisible">
+        <p class="center notice-msg">此功能不适用于虚拟资金账户。</p>
+    </div>
+
+    <div id="not_pa_error" class="invisible">
+        <p class="center notice-msg">此功能仅适用于支付代理账户。</p>
+    </div>
+
+    <div id="paymentagent_transfer" class="invisible">
+        <p>请在下表中填写登录 ID 以及要转给客户的金额：</p>
+        <table class="kv-pairs">
+            <tr>
+                <td>
+                    <label for="client_id">转给登录 ID</label>
+                </td>
+                <td>
+                    <input type="text" name="client_id" id="client_id"/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <span class="errorfield invisible" id="transfer_error_client_id"></span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="amount">金额</label>
+                </td>
+                <td>
+                    <input type="number" name="amount" min="10" max="2000"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <span class="errorfield invisible" id="transfer_error_amount">请输入有效金额。</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <span class="hint">最小： 10 最大： 2000</span>
+                </td>
+            </tr>
+        </table>
+        <p id="insufficient-balance-error" class="errorfield invisible">余额不足</p>
+        <br/>
+        <span class="button ">
+            <button class="button " id="submit" name="submit" type="submit" value="Submit">提交</button>
+        </span>
+    </div>
+
+    <br>
+    <div id="paymentagent_transfer_notes" class="invisible">
+        <div>Notes:</div>
+        <ul>
+            <li>我们网站不收取任何转账费用。</li>
+            <li>一旦您点击“提交”按钮，资金将从您的账户转至客户的账户。</li>
+            <li>您的客户将收到电子邮件通知，告知其转账交易已处理。</li>
+        </ul>
+    </div>
+</div>
